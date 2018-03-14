@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Gordon\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-snackbar-dialog
+
+PATH: 
+  C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Gordon\AppData\Local\Microsoft\WindowsApps;C:\Users\Gordon\AppData\Roaming\npm;C:\Program Files\Genymobile\Genymotion\tools;C:\Users\Gordon\flutter\bin;
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.9.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "private": true,
+    "scripts": {
+      "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    },
+    "jest": {
+      "preset": "jest-expo"
+    },
+    "dependencies": {
+      "@expo/samples": "2.1.1",
+      "@expo/vector-icons": "^6.2.2",
+      "apsl-react-native-button": "^3.1.0",
+      "expo": "^25.0.0",
+      "firebase": "^4.10.1",
+      "moment": "^2.21.0",
+      "react": "16.2.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+      "react-native-firebase": "^3.2.6",
+      "react-native-highcharts": "^1.0.2",
+      "react-native-lightbox": "^0.7.0",
+      "react-native-svg-charts": "^3.0.1",
+      "react-navigation": "^1.0.0-beta.27"
+    },
+    "devDependencies": {
+      "jest-expo": "^25.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.63.173:443
+      at Object._errnoException (util.js:1022:11)
+      at _exceptionWithHostPort (util.js:1044:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1182:14)

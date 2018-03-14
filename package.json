@@ -1,0 +1,31 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/samples": "2.1.1",
+    "@expo/vector-icons": "^6.2.2",
+    "apsl-react-native-button": "^3.1.0",
+    "expo": "^25.0.0",
+    "firebase": "^4.10.1",
+    "mobx": "^4.0.2",
+    "mobx-react": "^5.0.0",
+    "moment": "^2.21.0",
+    "react": "16.2.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native-firebase": "^3.2.6",
+    "react-native-highcharts": "^1.0.2",
+    "react-native-lightbox": "^0.7.0",
+    "react-native-snackbar-component": "^1.0.8",
+    "react-native-svg-charts": "^3.0.1",
+    "react-navigation": "^1.0.0-beta.27"
+  },
+  "devDependencies": {
+    "jest-expo": "^25.0.0"
+  }
+}

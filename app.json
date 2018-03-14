@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "thanks-goodness",
+    "description": "Thank people who deserve thanks.",
+    "slug": "thanks-goodness",
+    "scheme": "thnks",
+    "privacy": "public",
+    "sdkVersion": "25.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false
+    }
+  }
+}
