@@ -11,8 +11,8 @@ import ReceivedLightbox from './ReceivedLightbox';
 import GlobalStyles from '../../constants/GlobalStyles';
 import Layout from '../../constants/Layout';
 import {webStorage} from "../../api/firebase";
-import Button from 'apsl-react-native-button';
 import Colors from '../../constants/Colors';
+import {CacheManager} from 'react-native-expo-image-cache';
 
 export class ReceivedTileComponent extends React.Component {
     constructor(props){
@@ -32,6 +32,11 @@ export class ReceivedTileComponent extends React.Component {
         webStorage.child('merits/' + this.props.merit.key + '@2x.png').getDownloadURL().then(function(url) {
             //console.log('got image uri',url);
             originalThis.setState({image:{uri: url}});
+            // TODO: Don't know why the cache manager isn't working
+            // CacheManager.cache(url, (newURI) => {
+            //     console.log('newURI',newURI);
+            //     originalThis.setState({ image: {uri: newURI} })
+            // });
         }).catch(function(error) {
             // Handle any errors
             console.log('image error',error);
@@ -55,6 +60,8 @@ export class ReceivedTileComponent extends React.Component {
             width: size+Layout.standardPadding,
             flexBasis: size+Layout.standardPadding,
         }
+        const preview = this.state.image;
+        const image = this.state.image;
         return (
             <ReceivedLightbox merit={this.props.merit} springConfig={{bounciness:100, speed:50}} swipeToDismiss={false} underlayColor={'#fff'} backgroundColor={'#fff'}>
                 <View style={[styles.card,sizeStyle]}>

@@ -19,7 +19,7 @@ export default class SettingsScreen extends React.Component {
 
     _handleLogout() {
         firebaseApp.auth().signOut();
-        stateManager.user = null;
+        stateManager.clearUserInfo();
         this.props.screenProps.rootNavigation.navigate('Login');
     }
 

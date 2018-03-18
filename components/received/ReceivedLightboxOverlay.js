@@ -22,7 +22,7 @@ import GivingInputForm from "../giving/GivingInputForm";
 
 const WINDOW_HEIGHT = Layout.window.height;
 const WINDOW_WIDTH = Layout.window.width;
-const STATUS_BAR_OFFSET = (Platform.OS === 'android' ? -25 : 0);
+const STATUS_BAR_OFFSET = (Platform.OS === 'android' ? -26 : 0);
 const isIOS = Platform.OS === 'ios';
 
 

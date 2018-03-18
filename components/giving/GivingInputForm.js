@@ -24,7 +24,6 @@ import SnackBar from 'react-native-snackbar-component'
 import HelperFunctions from "../../constants/HelperFunctions";
 
 
-
 export default class GivingInputForm extends Component {
     constructor(props){
         super(props);
@@ -168,6 +167,7 @@ export default class GivingInputForm extends Component {
     }
 
     render() {
+        var data = [1,2,3,4,5];
         return (
             <View>
                 <Text style={GlobalStyles.errorText}>{this.state.error}</Text>
@@ -175,7 +175,7 @@ export default class GivingInputForm extends Component {
                 <View style={GlobalStyles.pickerContainer}>
                     <Picker selectedValue={this.state.reason} style={GlobalStyles.picker} itemStyle={GlobalStyles.pickerItem}
                             onValueChange={(itemValue, itemIndex) => this.setState({reason: itemValue})}>
-                        <Picker.Item key={'why'} label={'Tell us why...'} value={''} style={{color:'#ccc'}} />
+                        <Picker.Item key={'why'} label={'Tell us why...'} value={''} />
                         {
                             this.state.categoryList.map((category, j) => {
                                 if(category!=null && category != undefined) {

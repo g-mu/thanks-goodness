@@ -33,29 +33,13 @@ export default class LoginScreen extends React.Component {
         //header: null,
     };
 
-    // componentWillMount() {
-    //     // this.setState({error: ' ', loading: false});
-    //     // NetInfo.getConnectionInfo().then((connectionInfo) => {
-    //     //     console.log('Initial, type: ' + connectionInfo.type + ', effectiveType: ' + connectionInfo.effectiveType);
-    //     // });
-    // }
-
     componentDidMount(){
         this.setState({error: ' ', loading: false});
         firebaseApp.auth().onAuthStateChanged(authUser => {
+            //console.log('authUser',authUser);
             if(authUser != null && this.fbReturnedAuth == false) {
                 this.fbReturnedAuth = true;
                 //console.log('authUser', authUser, stateManager.newaccountinfo);
-                // stateManager.user = {
-                //     uid: authUser.uid,
-                //     email: authUser.email,
-                //     profileid: '',
-                //     merits:[],
-                //     meritStats: {
-                //         received: [],
-                //         given: [],
-                //     },
-                // };
                 stateManager.user.uid = authUser.uid;
                 stateManager.user.email = authUser.email;
 
@@ -134,16 +118,18 @@ export default class LoginScreen extends React.Component {
                         }
 
                         // load givens
-                        var givens = Object.values(val.given);
-                        for(var i = 0; i < givens.length; i++){
-                            var statindex = HelperFunctions.ArrayHelpers.arrayContainsKey(stateManager.user.meritStats.given, 'category', givens[i].category);
-                            if (statindex == -1) {
-                                stateManager.user.meritStats.given.push({
-                                    category: givens[i].category,
-                                    count: 1,
-                                })
-                            } else {
-                                stateManager.user.meritStats.given[statindex].count++;
+                        if(val.given) {
+                            var givens = Object.values(val.given);
+                            for (var i = 0; i < givens.length; i++) {
+                                var statindex = HelperFunctions.ArrayHelpers.arrayContainsKey(stateManager.user.meritStats.given, 'category', givens[i].category);
+                                if (statindex == -1) {
+                                    stateManager.user.meritStats.given.push({
+                                        category: givens[i].category,
+                                        count: 1,
+                                    })
+                                } else {
+                                    stateManager.user.meritStats.given[statindex].count++;
+                                }
                             }
                         }
                         //console.log('stateManager user',stateManager.user);

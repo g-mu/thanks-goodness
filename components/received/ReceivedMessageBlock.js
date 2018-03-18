@@ -30,10 +30,12 @@ const styles = StyleSheet.create({
     from:{
         color: Colors.palette.mediumPurple,
         fontSize:10,
+        fontFamily: 'assistant-light',
     },
     message:{
         marginTop:4,
         fontSize:14,
         lineHeight:24,
+        fontFamily: 'assistant-light',
     },
 });

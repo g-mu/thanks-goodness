@@ -7,15 +7,15 @@ import LoginScreen from '../screens/LoginScreen';
 import CreateAccountScreen from '../screens/CreateAccountScreen';
 
 export default StackNavigator(
-  {
-    Login: {
-      screen: LoginScreen,
+    {
+        Login: {
+            screen: LoginScreen,
+        },
+        CreateAccount: {
+            screen: CreateAccountScreen,
+        },
     },
-    CreateAccount: {
-      screen: CreateAccountScreen,
-    },
-  },
-  {
-      headerMode: 'none',
-  }
+    {
+        headerMode: 'none',
+    }
 );

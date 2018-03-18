@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Constants, Svg } from 'expo';
-import {PieChart} from './pie-chart';
+import {PieChart} from './lib/pie-chart';
 import Layout from "../constants/Layout";
 import Colors from "../constants/Colors";
 
@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
         flex: 1,
         padding:4,
         height:28,
+        fontFamily: 'assistant-light',
     },
 });
 

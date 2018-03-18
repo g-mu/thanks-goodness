@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
 import {firebaseApp, meritData, profileData, categoryData} from '../api/firebase';
 
-export default stateManager = {
-    user: {
+class StateManager {
+    user = {
         merits: [],
         meritStats: {
             received: [],
             given: [],
         },
-    },
-    newaccountinfo: null,
+    };
+    newaccountinfo = null;
 
-    system: {
+    system = {
         merits: [],
         categories: [],
-    },
+    };
 
-    getSystemMerits: () => {
+    clearUserInfo = () => {
+        this.user = {
+            merits: [],
+            meritStats: {
+                received: [],
+                given: [],
+            },
+        };
+        this.newaccountinfo = null;
+    }
+
+    getSystemMerits = () => {
         return new Promise((resolve, reject)=>{
             //console.log('loading merits');
-            if(stateManager.system.merits.length > 0){
-                resolve(stateManager.system.merits);
+            if(this.system.merits.length > 0){
+                resolve(this.system.merits);
             }
             meritData.once('value').then((snapshot) => {
                 let snap = snapshot.val();
@@ -33,33 +44,35 @@ export default stateManager = {
                     vals.push(m);
                 }
                 //console.log('merits',vals);
-                stateManager.system.merits = vals;
+                this.system.merits = vals;
                 resolve(vals);
             }).catch((error) => {
                 reject(error);
             });
         });
-    },
-    getSystemCategories: () => {
+    };
+
+    getSystemCategories = () => {
         return new Promise((resolve, reject)=>{
-            console.log('loading categories');
-            if(stateManager.system.categories.length > 0){
-                resolve(stateManager.system.categories);
+            //console.log('loading categories');
+            if(this.system.categories.length > 0){
+                resolve(this.system.categories);
             }
             categoryData.once('value').then((snapshot) => {
                 let snap = snapshot.val();
                 let vals = snap.sort();
-                stateManager.system.categories = vals;
+                this.system.categories = vals;
                 //console.log('categories',stateManager.system.categories);
                 resolve(vals);
             }).catch((error) => {
                 reject(error);
             });
         });
-    },
+    };
 }
 
-
+let stateManager = new StateManager();
+export default stateManager;
 
 
 

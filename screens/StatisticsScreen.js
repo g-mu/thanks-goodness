@@ -89,9 +89,9 @@ export default class StatisticsScreen extends React.Component {
         <View style={GlobalStyles.container}>
             <LogoHeader short={true} title={'You\'ve been thanked'} navigation={this.props.navigation}/>
             <ScrollView>
-                <Text style={styles.title}>Given</Text>
+                <Text style={GlobalStyles.sectionHeader}>Given</Text>
                 <SvgPieChart data={this.state.givenData}/>
-                <Text style={styles.title}>Received</Text>
+                <Text style={GlobalStyles.sectionHeader}>Received</Text>
                 <SvgPieChart data={this.state.receivedData}/>
                 <View style={GlobalStyles.spacerPageBottom}></View>
             </ScrollView>

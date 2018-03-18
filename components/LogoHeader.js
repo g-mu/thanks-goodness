@@ -82,5 +82,6 @@ const styles = StyleSheet.create({
         height: 44,
         color: Colors.palette.darkBlue,
         fontSize: 16,
+        fontFamily: 'assistant-regular',
     }
 });

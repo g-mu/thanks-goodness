@@ -14,6 +14,8 @@ export default StyleSheet.create({
         borderColor: Colors.palette.mediumPurple,
         padding: 12,
         borderRadius: 4,
+        fontFamily: 'assistant-regular',
+        fontSize: 14,
     },
     errorText: {
       color: 'red',
@@ -22,22 +24,27 @@ export default StyleSheet.create({
         margin: Layout.standardPadding,
         marginBottom: Layout.standardPadding/4,
         fontSize:16,
+        fontFamily: 'assistant-light',
     },
     buttonStandard: {
         backgroundColor: Colors.palette.darkBlue,
         padding: 12,
         borderRadius: 4,
         marginBottom: 16,
-        borderWidth: 0
+        borderWidth: 0,
     },
     buttonStandardText: {
-        color: '#fff'
+        color: '#fff',
+        fontFamily: 'assistant-regular',
+        fontSize: 14,
     },
     buttonLink: {
         borderWidth: 0,
     },
     buttonLinkText: {
         color: Colors.palette.darkBlue,
+        fontFamily: 'assistant-regular',
+        fontSize: 14,
     },
     fullWidthImage:{
         aspectRatio: (1/1), // Image dimensions are known: 600, 330
@@ -81,5 +88,7 @@ export default StyleSheet.create({
     },
     pickerItem:{
         height: 16,
+        fontFamily: 'assistant-regular',
+        fontSize: 14,
     }
 });
